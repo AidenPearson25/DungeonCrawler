@@ -1,1 +1,1 @@
-move_towards_point(playerGorth_obj.x, playerGorth_obj.y, 6)
+move_towards_point(playerGorth_obj.x, playerGorth_obj.y, 5.5)
