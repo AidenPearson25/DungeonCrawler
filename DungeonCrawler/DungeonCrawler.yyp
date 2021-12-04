@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"spr_floor1DungeonMap","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"order":6,},
+    {"id":{"name":"dungeonSet1","path":"tilesets/dungeonSet1/dungeonSet1.yy",},"order":0,},
     {"id":{"name":"enemyRock_spr","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"order":5,},
     {"id":{"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"order":0,},
     {"id":{"name":"startButton_obj","path":"objects/startButton_obj/startButton_obj.yy",},"order":4,},
