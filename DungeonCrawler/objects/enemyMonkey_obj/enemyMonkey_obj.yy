@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "enemySlime_spr",
-    "path": "sprites/enemySlime_spr/enemySlime_spr.yy",
+    "name": "enemyMonkey_spr",
+    "path": "sprites/enemyMonkey_spr/enemyMonkey_spr.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"playerGorth_obj","path":"objects/playerGorth_obj/playerGorth_obj.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemySlime_obj",
+  "name": "enemyMonkey_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

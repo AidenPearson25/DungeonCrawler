@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"LayerId":{"name":"8b42d16e-b730-4da1-8bde-72091ecec789","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"12bf0a17-df6c-4a60-a2c9-1415b33b8f86","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"12bf0a17-df6c-4a60-a2c9-1415b33b8f86","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"LayerId":{"name":"a0850d97-aa81-471e-8d85-a446f616914c","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"resourceVersion":"1.0","name":"12bf0a17-df6c-4a60-a2c9-1415b33b8f86","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},
+    "spriteId": {"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"20d6e5a1-8a39-482e-9525-2819a8202c2d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b14f9ee1-3fba-4f04-ba09-03ac4e6d6ba4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12bf0a17-df6c-4a60-a2c9-1415b33b8f86","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},
+    "parent": {"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},
     "resourceVersion": "1.3",
-    "name": "playerGorth_spr",
+    "name": "enemyMonkey_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b42d16e-b730-4da1-8bde-72091ecec789","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a0850d97-aa81-471e-8d85-a446f616914c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "playerGorth_spr",
+  "name": "enemyMonkey_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }

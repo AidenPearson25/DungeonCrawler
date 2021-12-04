@@ -1,0 +1,1 @@
+playerGorth_obj.health -= 1;

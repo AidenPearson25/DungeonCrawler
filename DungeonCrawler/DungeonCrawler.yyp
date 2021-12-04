@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"enemyRock_spr","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"order":5,},
     {"id":{"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"order":0,},
     {"id":{"name":"startButton_obj","path":"objects/startButton_obj/startButton_obj.yy",},"order":4,},
     {"id":{"name":"enemyLadybug_spr","path":"sprites/enemyLadybug_spr/enemyLadybug_spr.yy",},"order":2,},
@@ -9,7 +10,10 @@
     {"id":{"name":"playerGorth_obj","path":"objects/playerGorth_obj/playerGorth_obj.yy",},"order":0,},
     {"id":{"name":"enemySlime_spr","path":"sprites/enemySlime_spr/enemySlime_spr.yy",},"order":1,},
     {"id":{"name":"startButton_spr","path":"sprites/startButton_spr/startButton_spr.yy",},"order":3,},
+    {"id":{"name":"enemyMonkey_obj","path":"objects/enemyMonkey_obj/enemyMonkey_obj.yy",},"order":5,},
     {"id":{"name":"enemyMiniSlime_obj","path":"objects/enemyMiniSlime_obj/enemyMiniSlime_obj.yy",},"order":2,},
+    {"id":{"name":"enemyRock_obj","path":"objects/enemyRock_obj/enemyRock_obj.yy",},"order":6,},
+    {"id":{"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"order":4,},
     {"id":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},"order":0,},
   ],
   "Options": [

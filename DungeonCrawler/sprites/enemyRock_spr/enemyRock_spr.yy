@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"LayerId":{"name":"8b42d16e-b730-4da1-8bde-72091ecec789","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6d67be20-e7fe-4863-816c-31efc8298693","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6d67be20-e7fe-4863-816c-31efc8298693","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"LayerId":{"name":"fb447a1d-9b87-4291-947a-f1b9c28b8622","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"enemyRock_spr","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"resourceVersion":"1.0","name":"6d67be20-e7fe-4863-816c-31efc8298693","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},
+    "spriteId": {"name":"enemyRock_spr","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"20d6e5a1-8a39-482e-9525-2819a8202c2d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4718f8cc-6288-4c5d-8fe3-24ab69c5e5ff","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"21ff97cc-7d7a-497e-91cc-942ab92c2ccc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d67be20-e7fe-4863-816c-31efc8298693","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,18 +54,18 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 32,
-    "yorigin": 32,
+    "xorigin": 0,
+    "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},
+    "parent": {"name":"enemyRock_spr","path":"sprites/enemyRock_spr/enemyRock_spr.yy",},
     "resourceVersion": "1.3",
-    "name": "playerGorth_spr",
+    "name": "enemyRock_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b42d16e-b730-4da1-8bde-72091ecec789","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fb447a1d-9b87-4291-947a-f1b9c28b8622","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "playerGorth_spr",
+  "name": "enemyRock_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }
