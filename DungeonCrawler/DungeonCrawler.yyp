@@ -1,6 +1,16 @@
 {
   "resources": [
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"playerGorth_spr","path":"sprites/playerGorth_spr/playerGorth_spr.yy",},"order":0,},
+    {"id":{"name":"startButton_obj","path":"objects/startButton_obj/startButton_obj.yy",},"order":4,},
+    {"id":{"name":"enemyLadybug_spr","path":"sprites/enemyLadybug_spr/enemyLadybug_spr.yy",},"order":2,},
+    {"id":{"name":"enemySlime_obj","path":"objects/enemySlime_obj/enemySlime_obj.yy",},"order":1,},
+    {"id":{"name":"enemyLadybug_obj","path":"objects/enemyLadybug_obj/enemyLadybug_obj.yy",},"order":3,},
+    {"id":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},"order":1,},
+    {"id":{"name":"playerGorth_obj","path":"objects/playerGorth_obj/playerGorth_obj.yy",},"order":0,},
+    {"id":{"name":"enemySlime_spr","path":"sprites/enemySlime_spr/enemySlime_spr.yy",},"order":1,},
+    {"id":{"name":"startButton_spr","path":"sprites/startButton_spr/startButton_spr.yy",},"order":3,},
+    {"id":{"name":"enemyMiniSlime_obj","path":"objects/enemyMiniSlime_obj/enemyMiniSlime_obj.yy",},"order":2,},
+    {"id":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Android","path":"options/android/options_android.yy",},
@@ -22,7 +32,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},},
+    {"roomId":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
