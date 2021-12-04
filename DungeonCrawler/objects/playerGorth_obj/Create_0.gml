@@ -1,3 +1,3 @@
 speed = 0;
 
-health = 6;
+healthValue = 6;
