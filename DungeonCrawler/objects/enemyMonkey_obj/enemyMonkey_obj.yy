@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Floor1",
+    "path": "folders/Objects/Enemies/Floor1.yy",
   },
   "resourceVersion": "1.0",
   "name": "enemyMonkey_obj",

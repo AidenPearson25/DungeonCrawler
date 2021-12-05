@@ -1,1 +1,0 @@
-invincibleActivate = false;
