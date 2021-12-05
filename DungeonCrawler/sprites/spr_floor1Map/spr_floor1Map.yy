@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 2,
-  "bbox_right": 79,
+  "bbox_right": 111,
   "bbox_top": 0,
   "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 80,
+  "width": 112,
   "height": 64,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a501ab9f-7835-4cd9-98ce-0cdf7808e675","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a501ab9f-7835-4cd9-98ce-0cdf7808e675","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"LayerId":{"name":"dc06f4d3-f10c-4fc6-8ccb-718954c7234a","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_floor1DungeonMap","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"resourceVersion":"1.0","name":"a501ab9f-7835-4cd9-98ce-0cdf7808e675","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b80ed7fe-66d2-4d4c-99f9-134c19dfbbcb","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b80ed7fe-66d2-4d4c-99f9-134c19dfbbcb","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},"LayerId":{"name":"b73dd05a-15ed-4996-8d9b-1b461465a1ef","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_floor1Map","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},"resourceVersion":"1.0","name":"b80ed7fe-66d2-4d4c-99f9-134c19dfbbcb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_floor1DungeonMap","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},
+    "spriteId": {"name":"spr_floor1Map","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d6f70bb8-75c8-4549-b12b-baa6bad911ba","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a501ab9f-7835-4cd9-98ce-0cdf7808e675","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"68b24cc3-ae72-44b4-a80d-2bdf05cbb685","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b80ed7fe-66d2-4d4c-99f9-134c19dfbbcb","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_floor1DungeonMap","path":"sprites/spr_floor1DungeonMap/spr_floor1DungeonMap.yy",},
+    "parent": {"name":"spr_floor1Map","path":"sprites/spr_floor1Map/spr_floor1Map.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_floor1DungeonMap",
+    "name": "spr_floor1Map",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dc06f4d3-f10c-4fc6-8ccb-718954c7234a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b73dd05a-15ed-4996-8d9b-1b461465a1ef","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_floor1DungeonMap",
+  "name": "spr_floor1Map",
   "tags": [],
   "resourceType": "GMSprite",
 }
