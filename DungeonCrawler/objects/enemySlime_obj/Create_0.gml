@@ -1,5 +1,1 @@
-speed = 0;
-
-health = 2;
-
-currentDirection = 0;
+image_blend = c_red;

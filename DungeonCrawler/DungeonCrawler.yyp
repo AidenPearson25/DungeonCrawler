@@ -16,6 +16,7 @@
     {"id":{"name":"enemyMiniSlime_obj","path":"objects/enemyMiniSlime_obj/enemyMiniSlime_obj.yy",},"order":1,},
     {"id":{"name":"enemyRock_obj","path":"objects/enemyRock_obj/enemyRock_obj.yy",},"order":3,},
     {"id":{"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"order":4,},
+    {"id":{"name":"obj_roomCreator","path":"objects/obj_roomCreator/obj_roomCreator.yy",},"order":8,},
     {"id":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},"order":0,},
   ],
   "Options": [

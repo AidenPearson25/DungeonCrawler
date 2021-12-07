@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "enemySlime_spr",
-    "path": "sprites/enemySlime_spr/enemySlime_spr.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -20,17 +17,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Floor1",
-    "path": "folders/Objects/Enemies/Floor1.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemySlime_obj",
+  "name": "obj_roomCreator",
   "tags": [],
   "resourceType": "GMObject",
 }
