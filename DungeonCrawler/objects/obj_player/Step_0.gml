@@ -6,6 +6,51 @@ switch(currentState) //Controlling Everything
 		break; //Done with defending
 	
 	case 2: //Rolling
+		with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				switch(wallType)
+				{
+					case 3: //Right
+						if (obj_player.xSpeed > 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+							
+					case 2: //Down
+						if (obj_player.ySpeed > 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					case 1: //Left
+						if (obj_player.xSpeed < 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 0: //Top
+						if (obj_player.ySpeed < 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+						break;
+				}
+			}
+		}
+		
 		x += xSpeed; //Add to x
 		y += ySpeed; //Add to y
 		break; //Done with rolling
@@ -118,6 +163,51 @@ switch(currentState) //Controlling Everything
 
 		xSpeed = (moveSpeed * xAcceleration); //Set xSpeed
 		ySpeed = (moveSpeed * yAcceleration); //Set ySpeed
+
+		with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				switch(wallType)
+				{
+					case 3: //Right
+						if (obj_player.xAcceleration > 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 2: //Down
+						if (obj_player.yAcceleration > 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					case 1: //Left
+						if (obj_player.xAcceleration < 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 0: //Top
+						if (obj_player.yAcceleration < 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+						break;
+				}
+			}
+		}
 
 		x += xSpeed; //Add to x
 		y += ySpeed; //Add to y

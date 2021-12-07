@@ -1,1 +1,1 @@
-image_blend = c_red;
+objimage_blend = c_red;

@@ -17,17 +17,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Room Controllers",
+    "path": "folders/Objects/Room Controllers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_roomCreator",
+  "name": "obj_roomTrigger",
   "tags": [],
   "resourceType": "GMObject",
 }
