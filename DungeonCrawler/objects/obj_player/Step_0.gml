@@ -215,7 +215,7 @@ switch(currentState) //Controlling Everything
 		//Start attack
 		if (keyboard_check_pressed(ord(attackKey))) //Check if attack key is pressed
 		{
-			
+			instance_create_layer(x,y,"objects",obj_bullet);
 		}
 
 		//Start a roll
