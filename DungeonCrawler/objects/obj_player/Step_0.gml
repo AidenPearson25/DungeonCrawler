@@ -65,12 +65,14 @@ switch(currentState) //Controlling Everything
 		{
 			yInput = -1; //yInput Up
 			lastDirection = 0; //Up
+			image_speed = 0.25;
 		}
 
 		if (!keyboard_check(ord(upKey)) && keyboard_check(ord(downKey))) //Holding just down
 		{
 			yInput = 1; //yInput Down
 			lastDirection = 2; //Down
+			image_speed = 0.25;
 		}
 
 		if ((!keyboard_check(ord(upKey)) && !keyboard_check(ord(downKey))) || (keyboard_check(ord(upKey)) && keyboard_check(ord(downKey)))) //Neither or both
@@ -82,17 +84,25 @@ switch(currentState) //Controlling Everything
 		{
 			xInput = -1; //xInput Left
 			lastDirection = 1; //Left
+			image_speed = 0.25;
 		}
 
 		if (!keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey))) //Pressing just right
 		{
 			xInput = 1; //xInput Right
 			lastDirection = 3; //Right
+			image_speed = 0.25;
 		}
 
 		if ((!keyboard_check(ord(leftKey)) && !keyboard_check(ord(rightKey))) || (keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey)))) //Neither or both
 		{
 			xInput = 0; //xInput 0
+		}
+		
+		if (xInput == 0 && yInput == 0)
+		{
+			image_speed = 0;
+			image_index = 0;
 		}
 
 		switch(xInput) //Check xInput to add speed

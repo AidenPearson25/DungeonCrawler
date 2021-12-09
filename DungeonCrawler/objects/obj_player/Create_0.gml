@@ -10,6 +10,7 @@ rollKey = "K"; //Default dodge key
 defendKey = "L"; //Default defend key
 
 //States
+image_speed = 0;
 currentState = 0;
 
 //Movement variables
