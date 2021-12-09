@@ -32,3 +32,8 @@ rollSpeed = 3.75; //How fast you roll
 rollDuration = 10; //How long the roll lasts
 rollEndLag = 10; //How long you're vulnerable after rolling
 
+//Attack variables
+xAttackDirection = 0; //x attack direction
+yAttackDirection = 0; //y attack direction
+attackDuration =  15; //How long the attacking state lasts
+attackEndLag = 12; //How long between attacks

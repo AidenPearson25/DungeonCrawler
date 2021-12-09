@@ -225,8 +225,63 @@ switch(currentState) //Controlling Everything
 		//Start attack
 		if (keyboard_check_pressed(ord(attackKey))) //Check if attack key is pressed
 		{
-			instance_create_layer(x,y,"objects",obj_bullet);
+			currentState = 1; //Attacking state
+			alarm_set(2, attackDuration);
+			
+			if (xInput > 0 || xInput < 0) //If moving left or right
+			{
+				xAttackDirection = xInput; //Making the sword spawn in the player's current x direction
+				
+				if (yInput == 0)
+				{
+					yAttackDirection = 0; //Fix condition
+				}
+				
+			}
+			
+			if (yInput > 0 || yInput < 0) //If moving up or down
+			{
+				yAttackDirection = yInput; //Making the sword spawn in the player's current y direction
+				
+				if (xInput == 0)
+				{
+					xAttackDirection = 0; //Fix condition
+				}
+			}
+			
+			if (xInput == 0 && yInput == 0)
+			{
+				switch(lastDirection)
+				{
+					case 3: //Right
+						xAttackDirection = 1;
+						yAttackDirection = 0;
+						break;
+						
+					case 2: //Down
+						xAttackDirection = 0;
+						yAttackDirection = 1;
+						break;
+						
+					case 1: //Left
+						xAttackDirection = -1;
+						yAttackDirection = 0;
+						break;
+						
+					case 0: //Up
+						xAttackDirection = 0;
+						yAttackDirection = -1;
+						break;
+					
+					default:
+						show_debug_message("Something went wrong"); //Shouldn't happen
+						break;
+				}
+			}
+			
+			instance_create_layer(x,y,"objects",obj_sword); //Actually making the sword appear
 		}
+
 
 		//Start a roll
 		if (keyboard_check_pressed(ord(rollKey))) //Check if roll key is pressed
