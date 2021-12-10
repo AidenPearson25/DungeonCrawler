@@ -7,6 +7,7 @@ roomCount = irandom_range(10, 15);
 minRoomSize = 8;
 maxRoomSize = 20;
 tileGrid = [];
+pastInitial = false;
 failed = false;
 
 for (var i = 0; i < 100; i++)
@@ -35,7 +36,11 @@ function RoomCheck(_current)
 	if (failed)
 	{
 		_current.leftPos = [irandom_range(0, 80), irandom_range(0, 80)]; //Setting start coords
-		_current.leftSize = [irandom_range(minRoomSize, maxRoomSize), irandom_range(minRoomSize, maxRoomSize)]; //Setting room size (Static)
+		if (pastInitial)
+		{
+					_current.leftSize = [irandom_range(minRoomSize, maxRoomSize), irandom_range(minRoomSize, maxRoomSize)]; //Setting room size (Static)
+
+		}
 		RoomCheck(_current);
 	}
 	
@@ -70,6 +75,8 @@ var currentRoom = instance_create_layer(0, 0, "roomControllers", obj_roomData);
 currentRoom.leftPos = [irandom_range(0, 80), irandom_range(0, 80)]; //Setting start coords
 currentRoom.leftSize = [minRoomSize, minRoomSize]; //Setting room size (Static)
 RoomCheck(currentRoom);
+
+pastInitial = true;
 
 for (var i = 2; i < roomCount; i++)
 {

@@ -65,14 +65,22 @@ switch(currentState) //Controlling Everything
 		{
 			yInput = -1; //yInput Up
 			lastDirection = 0; //Up
-			image_speed = 0.25;
+			if (xInput == 0)
+			{
+				sprite_index = spr_playerUp;
+				image_speed = 1;
+			}
 		}
 
 		if (!keyboard_check(ord(upKey)) && keyboard_check(ord(downKey))) //Holding just down
 		{
 			yInput = 1; //yInput Down
 			lastDirection = 2; //Down
-			image_speed = 0.25;
+			if (xInput == 0)
+			{
+				sprite_index = spr_playerDown;
+				image_speed = 1;
+			}
 		}
 
 		if ((!keyboard_check(ord(upKey)) && !keyboard_check(ord(downKey))) || (keyboard_check(ord(upKey)) && keyboard_check(ord(downKey)))) //Neither or both
@@ -84,14 +92,22 @@ switch(currentState) //Controlling Everything
 		{
 			xInput = -1; //xInput Left
 			lastDirection = 1; //Left
-			image_speed = 0.25;
+			if (yInput == 0)
+			{
+				sprite_index = spr_playerLeft;
+				image_speed = 1;
+			}
 		}
 
 		if (!keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey))) //Pressing just right
 		{
 			xInput = 1; //xInput Right
 			lastDirection = 3; //Right
-			image_speed = 0.25;
+			if (yInput == 0)
+			{
+				sprite_index = spr_playerRight;
+				image_speed = 1;
+			}
 		}
 
 		if ((!keyboard_check(ord(leftKey)) && !keyboard_check(ord(rightKey))) || (keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey)))) //Neither or both
