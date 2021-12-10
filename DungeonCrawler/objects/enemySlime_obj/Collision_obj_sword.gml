@@ -1,9 +1,9 @@
-/// @description Insert description here
+/// @description Take damage
 // You can write your code in this editor
-instance_destroy();
-for (var i = 0; i < 2; ++i) {
-    with instance_create_layer(x,y,"objects",enemyMiniSlime_obj){
-		x+=irandom_range(5,10);
-		y+=irandom_range(5,10);
-	}
+if(slimeState = 1)
+{
+	exit; //don't take damage if you're already hit.	
 }
+slimeHealth = takeDamage(obj_sword.weaponAttack, slimeHealth); //A script for this in case we want to update a healthbar or something.
+alarm_set(0, 15); //Recoil for this many frames.
+slimeState = 1;

@@ -37,3 +37,6 @@ xAttackDirection = 0; //x attack direction
 yAttackDirection = 0; //y attack direction
 attackDuration =  15; //How long the attacking state lasts
 attackEndLag = 12; //How long between attacks
+
+//Equipment
+//playerWeapon = obj_sword; //Do something like this so that later when we have multiple weapons, we can have the enemies just get the player weapon when taking damage.
