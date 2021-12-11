@@ -30,6 +30,9 @@ bounceTime = 15; //The amount of time the slime bounces for.
 alarm_set(1, irandom_range(bounceMin, bounceMax)); //Prepare the bounce loop
 speedx = random_range(1,2); //Set speed
 
+recoilAngle = 0;
+recoilSpeed = 7;
+
 //Targeting
 aimX = 0; //store the player's x, allowing them to kite the slime
 aimY = 0;
