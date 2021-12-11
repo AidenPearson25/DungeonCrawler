@@ -86,6 +86,8 @@ for (var i = 2; i < roomCount; i++)
 	RoomCheck(currentRoom);
 }
 
+DrawHallways();
+
 for (var i = 0; i < 100; i++)
 {
 	for (var j = 0; j < 100; j++)
