@@ -3,7 +3,7 @@
 switch(slimeState)
 {
 	case 2: //Attack player
-		//Code for attacking the player.
+		move_towards_point(obj_player.x, obj_player.y, speedx);
 		break;
 	case 1: //Recoil
 		speed = 2;
