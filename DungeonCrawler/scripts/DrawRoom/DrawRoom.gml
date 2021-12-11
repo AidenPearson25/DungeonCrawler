@@ -2,10 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DrawRoom(_roomObject)
 {
+	randomize();
+	
 	var grassType = irandom_range(0, 3);
 	var ground = layer_tilemap_get_id("ti_ground"); //Set ground tilemap name
 	var deco = layer_tilemap_get_id("ti_deco"); //Set deco tilemap name
 	var wall = layer_tilemap_get_id("ti_walls"); //Set wall tilemap name
+	decoArray = [1, 2, 7, 8, 9, 14, 15, 16, 21, 22, 23, 25];
 	
 	for (var i = 0; i < _roomObject.leftSize[0]; i++) //Set x 
 	{
@@ -44,4 +47,21 @@ function DrawRoom(_roomObject)
 		tilemap_set_at_pixel(wall, 19, (_roomObject.leftPos[0] + 1) * 16, ((_roomObject.leftPos[1] + i) * 16));
 		tilemap_set_at_pixel(wall, 26, (_roomObject.leftPos[0] + _roomObject.leftSize[0] - 2) * 16, ((_roomObject.leftPos[1] + i) * 16));
 	}
+	
+	for (var i = 1; i < _roomObject.leftSize[0] - 1; i++)
+	{
+		for (var j = 2; j < _roomObject.leftSize[1] - 1; j++)
+		{
+			var hasDeco = random_range(0, 1);
+			
+			if (hasDeco > 0.85)
+			{
+				var whatDeco = irandom_range(0, 11);
+				tilemap_set_at_pixel(deco, decoArray[whatDeco], (_roomObject.leftPos[0] + i) * 16, (_roomObject.leftPos[1] + j) * 16);
+			}
+		}
+	}
+	
+	_roomObject.x = ((_roomObject.leftPos[0] + (_roomObject.leftSize[0] / 2)) * 16);
+	_roomObject.y = ((_roomObject.leftPos[1] + (_roomObject.leftSize[1] / 2)) * 16);
 }

@@ -295,7 +295,10 @@ switch(currentState) //Controlling Everything
 				}
 			}
 			
-			instance_create_layer(x,y,"objects",obj_sword); //Actually making the sword appear
+			var weaponObject = instance_create_layer(x, y, "objects", equippedWeapon); //Actually making the sword appear
+			weaponObject.xDirection = xAttackDirection;
+			weaponObject.yDirection = yAttackDirection;
+			weaponObject.MatchDirection();
 		}
 
 

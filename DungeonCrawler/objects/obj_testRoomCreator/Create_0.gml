@@ -3,7 +3,7 @@
 
 randomize();
 
-roomCount = irandom_range(10, 15);
+roomCount = irandom_range(15, 20);
 minRoomSize = 8;
 maxRoomSize = 20;
 tileGrid = [];
@@ -84,4 +84,16 @@ for (var i = 2; i < roomCount; i++)
 	currentRoom.leftPos = [irandom_range(0, 80), irandom_range(0, 80)]; //Setting start coords
 	currentRoom.leftSize = [irandom_range(minRoomSize, maxRoomSize), irandom_range(minRoomSize, maxRoomSize)]; //Setting room size (Static)
 	RoomCheck(currentRoom);
+}
+
+for (var i = 0; i < 100; i++)
+{
+	for (var j = 0; j < 100; j++)
+	{
+		if (tileGrid[i, j] == false)
+		{
+			var wall = layer_tilemap_get_id("ti_walls"); //Set wall tilemap name
+			tilemap_set_at_pixel(wall, 10, i * 16, j * 16);
+		}
+	}
 }

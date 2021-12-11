@@ -33,6 +33,7 @@ rollDuration = 10; //How long the roll lasts
 rollEndLag = 10; //How long you're vulnerable after rolling
 
 //Attack variables
+equippedWeapon = obj_sword;
 xAttackDirection = 0; //x attack direction
 yAttackDirection = 0; //y attack direction
 attackDuration =  15; //How long the attacking state lasts
