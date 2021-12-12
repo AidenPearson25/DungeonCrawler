@@ -1,8 +1,8 @@
 switch(slimeState)
 {
 	case 1: //Recoil
-		//move_towards_point(-obj_player.x, -obj_player.y, recoilSpeed); //Someone else needs to do this
-		speed = recoilSpeed; //I'm directionally challenged.
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
 		break;
 	case 0: //move.
 		move_towards_point(obj_player.x, obj_player.y, speedx);

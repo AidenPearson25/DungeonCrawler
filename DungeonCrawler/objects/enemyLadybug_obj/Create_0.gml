@@ -6,3 +6,5 @@ bugState = 1; //Much like player and slime state.
 
 recoilAngle = 0;
 recoilSpeed = 7;
+
+bugAttack = 1; //How much damage the ladybug deals

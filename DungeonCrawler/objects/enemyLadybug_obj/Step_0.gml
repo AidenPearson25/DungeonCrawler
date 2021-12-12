@@ -5,7 +5,12 @@
 
 switch(bugState)
 {
-	case 1: //Attack player
+	case 1: //Recoil (this shouldn't be 0)
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		break;
+	
+	case 0: //Attack player (this should be 0)
 		if (((x - obj_player.x) > 0) && (xSpeed < 13))
 		{
 			xSpeed -= 0.1;
@@ -26,11 +31,6 @@ switch(bugState)
 				
 		x += xSpeed;
 		y += ySpeed;
-		break;
-		
-	case 0: //Recoil
-		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
-		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
 		break;
 	
 	default:
