@@ -4,4 +4,4 @@ if(slimeState == 1)
 {
 	exit; //Don't deal damage if you're busy taking damage.
 }
-playerTakeDamage(slimeAttack, instance_nearest(x,y,enemySlime_obj)); //Deal your damage to the player.
+playerTakeDamage(slimeAttack, self); //Deal your damage to the player.

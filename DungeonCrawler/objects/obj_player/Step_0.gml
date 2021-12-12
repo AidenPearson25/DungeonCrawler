@@ -1,6 +1,10 @@
 
 switch(currentState) //Controlling Everything
 {
+	case 5: //Die
+	
+		break;
+	
 	case 4: //Recoil
 		if(alarm_get(4) == -1) //If the invincibility alarm hasn't already been set,
 		{
@@ -471,6 +475,10 @@ if(iframes || rollInvincibility)
 else if(currentState == 4)
 {
 	invincibility = true; //Avoid unnecessary extra damage
+}
+else if(currentState == 5)
+{
+	invincibility = true; //Don't beat a dead horse.	
 }
 else
 {
