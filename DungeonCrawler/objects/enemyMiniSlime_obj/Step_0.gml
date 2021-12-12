@@ -1,3 +1,5 @@
+if (obj_player.gameOver == false)
+{
 switch(slimeState)
 {
 	case 1: //Recoil
@@ -12,4 +14,5 @@ switch(slimeState)
 	default:
 		show_debug_message("something went wrong"); //Shouldn't happen
 		break;
+}
 }

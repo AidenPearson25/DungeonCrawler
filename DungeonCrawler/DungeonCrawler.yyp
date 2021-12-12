@@ -12,8 +12,10 @@
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},"order":7,},
     {"id":{"name":"obj_roomTrigger","path":"objects/obj_roomTrigger/obj_roomTrigger.yy",},"order":1,},
     {"id":{"name":"walking_wav","path":"sounds/walking_wav/walking_wav.yy",},"order":0,},
+    {"id":{"name":"gameOverScreen_obj","path":"objects/gameOverScreen_obj/gameOverScreen_obj.yy",},"order":12,},
     {"id":{"name":"enemyLadybug_spr","path":"sprites/enemyLadybug_spr/enemyLadybug_spr.yy",},"order":2,},
     {"id":{"name":"obj_roomData","path":"objects/obj_roomData/obj_roomData.yy",},"order":2,},
+    {"id":{"name":"gameOverRoom","path":"rooms/gameOverRoom/gameOverRoom.yy",},"order":4,},
     {"id":{"name":"takeDamage","path":"scripts/takeDamage/takeDamage.yy",},"order":2,},
     {"id":{"name":"spr_playerRight","path":"sprites/spr_playerRight/spr_playerRight.yy",},"order":2,},
     {"id":{"name":"obj_sword","path":"objects/obj_sword/obj_sword.yy",},"order":10,},
@@ -71,6 +73,7 @@
     {"roomId":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},},
     {"roomId":{"name":"roomTest","path":"rooms/roomTest/roomTest.yy",},},
     {"roomId":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},},
+    {"roomId":{"name":"gameOverRoom","path":"rooms/gameOverRoom/gameOverRoom.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

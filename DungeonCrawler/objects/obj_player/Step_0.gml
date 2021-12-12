@@ -480,3 +480,15 @@ else
 {
 	invincibility = false;	
 }
+
+if (gameOver = true) {
+	if (audio_is_playing(walking_wav))
+	{
+		audio_stop_sound(walking_wav);
+	}
+	gameOverTimer -= 1/60;
+}
+
+if (gameOverTimer <= 0) {
+	room_goto(gameOverRoom);
+}

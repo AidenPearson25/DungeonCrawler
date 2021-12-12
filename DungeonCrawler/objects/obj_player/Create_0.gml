@@ -55,3 +55,7 @@ playerMaxHealth = 5; //How much health you can have
 playerHealth = 5; //How much health you currently have
 playerDefense = 5; //How much resistance you currently have
 damageReduction = playerDefense * 0.01; //Not using this for now, but we can return to this once we make armor.
+
+//Variables to set off the game over screen
+gameOver = false;
+gameOverTimer = 3;
