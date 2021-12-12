@@ -2,8 +2,57 @@
 switch(currentState) //Controlling Everything
 {
 	case 4: //Recoil
+		if(alarm_get(4) == -1) //If the invincibility alarm hasn't already been set,
+		{
+			alarm_set(4, recoilTime); //set the invinicibility alarm for recoil.
+		}
+	
 		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
 		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				switch(wallType)
+				{
+					case 3: //Right
+						if (obj_player.xSpeed > 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+							
+					case 2: //Down
+						if (obj_player.ySpeed > 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					case 1: //Left
+						if (obj_player.xSpeed < 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 0: //Top
+						if (obj_player.ySpeed < 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+						break;
+				}
+			}
+		}
 		break;
 	
 	case 3: //Defending

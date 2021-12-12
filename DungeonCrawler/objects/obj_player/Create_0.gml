@@ -15,10 +15,10 @@ currentState = 0;
 invincibility = false;
 
 //Recoil variables
-recoilTime = 10;
-recoilSpeed = 1.25;
+recoilTime = 15;
+recoilSpeed = 2;
 recoilAngle = 0;
-iframesTime = 30; //How much time before the player can take more damage
+iframesTime = 60; //How much time before the player can take more damage
 iframes = false;
 
 //Movement variables
