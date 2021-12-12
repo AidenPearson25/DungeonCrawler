@@ -70,6 +70,10 @@ switch(currentState) //Controlling Everything
 				sprite_index = spr_playerUp;
 				image_speed = 1;
 			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
 		}
 
 		if (!keyboard_check(ord(upKey)) && keyboard_check(ord(downKey))) //Holding just down
@@ -80,6 +84,10 @@ switch(currentState) //Controlling Everything
 			{
 				sprite_index = spr_playerDown;
 				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
 			}
 		}
 
@@ -97,6 +105,10 @@ switch(currentState) //Controlling Everything
 				sprite_index = spr_playerLeft;
 				image_speed = 1;
 			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
 		}
 
 		if (!keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey))) //Pressing just right
@@ -107,6 +119,10 @@ switch(currentState) //Controlling Everything
 			{
 				sprite_index = spr_playerRight;
 				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
 			}
 		}
 
@@ -119,6 +135,7 @@ switch(currentState) //Controlling Everything
 		{
 			image_speed = 0;
 			image_index = 0;
+			audio_stop_sound(walking_wav);
 		}
 
 		switch(xInput) //Check xInput to add speed
@@ -308,6 +325,10 @@ switch(currentState) //Controlling Everything
 			currentState = 2; //Rolling state
 			rollInvincibility = true;
 			alarm_set(0, rollDuration);
+			if (!audio_is_playing(rollSound_wav))
+			{
+				audio_play_sound(rollSound_wav, 3, false);
+			}
 			
 			if (xInput > 0 || xInput < 0) //If moving left or right
 			{
