@@ -7,6 +7,23 @@ if (obj_player.gameOver == false)
 switch(bugState)
 {
 	case 1: //Recoil (this shouldn't be 0)
+	with (obj_wall)
+		{
+			if (place_meeting(x, y, enemyLadybug_obj))
+			{
+				
+						if (enemyLadybug_obj.recoilSpeed > 0)
+						{
+							enemyLadybug_obj.recoilSpeed = 0;
+						}
+							
+			}
+			else
+			{
+				enemyLadybug_obj.recoilSpeed = 2;
+			}
+		}
+		
 		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
 		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
 		break;

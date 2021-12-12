@@ -10,53 +10,28 @@ switch(currentState) //Controlling Everything
 		{
 			alarm_set(4, recoilTime); //set the invinicibility alarm for recoil.
 		}
-	
-		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
-		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
 		with (obj_wall)
 		{
 			if (place_meeting(x, y, obj_player))
 			{
-				switch(wallType)
-				{
-					case 3: //Right
-						if (obj_player.xSpeed > 0)
+				
+						if (obj_player.recoilSpeed > 0)
 						{
-							obj_player.xAcceleration = 0;
-							obj_player.xSpeed = 0;
+							obj_player.recoilSpeed = 0;
 						}
-						break;
 							
-					case 2: //Down
-						if (obj_player.ySpeed > 0)
-						{
-							obj_player.yAcceleration = 0;
-							obj_player.ySpeed = 0;
-						}
-						break;
-						
-					case 1: //Left
-						if (obj_player.xSpeed < 0)
-						{
-							obj_player.xAcceleration = 0;
-							obj_player.xSpeed = 0;
-						}
-						break;
-						
-					case 0: //Top
-						if (obj_player.ySpeed < 0)
-						{
-							obj_player.yAcceleration = 0;
-							obj_player.ySpeed = 0;
-						}
-						break;
-						
-					default: //Shouldn't happen
-						show_debug_message("Something went wrong");
-						break;
-				}
+			}
+			else
+			{
+				obj_player.recoilSpeed = 2;
 			}
 		}
+	
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
 		break;
 	
 	case 3: //Defending
