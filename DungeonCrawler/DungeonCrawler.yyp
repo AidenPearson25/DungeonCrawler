@@ -33,6 +33,7 @@
     {"id":{"name":"spr_monkeyDown","path":"sprites/spr_monkeyDown/spr_monkeyDown.yy",},"order":1,},
     {"id":{"name":"obj_testRoomCreator","path":"objects/obj_testRoomCreator/obj_testRoomCreator.yy",},"order":11,},
     {"id":{"name":"enemyMiniSlime_obj","path":"objects/enemyMiniSlime_obj/enemyMiniSlime_obj.yy",},"order":1,},
+    {"id":{"name":"emulogic_font","path":"fonts/emulogic_font/emulogic_font.yy",},"order":0,},
     {"id":{"name":"enemyRock_obj","path":"objects/enemyRock_obj/enemyRock_obj.yy",},"order":3,},
     {"id":{"name":"enemyMonkey_spr","path":"sprites/enemyMonkey_spr/enemyMonkey_spr.yy",},"order":4,},
     {"id":{"name":"DrawRoom","path":"scripts/DrawRoom/DrawRoom.yy",},"order":1,},
@@ -62,8 +63,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},},
     {"roomId":{"name":"startScreenRoom","path":"rooms/startScreenRoom/startScreenRoom.yy",},},
+    {"roomId":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},},
     {"roomId":{"name":"roomTest","path":"rooms/roomTest/roomTest.yy",},},
   ],
   "Folders": [
