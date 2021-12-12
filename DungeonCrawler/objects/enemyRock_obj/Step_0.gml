@@ -1,4 +1,5 @@
-if (takeAim == true) {
-	move_towards_point(playerGorth_obj.x, playerGorth_obj.y, 8);
-	takeAim = false;
+if (place_meeting(x, y, obj_player))
+{
+	// Insert damage logic here
+	instance_destroy();
 }
