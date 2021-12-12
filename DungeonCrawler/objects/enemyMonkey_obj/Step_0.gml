@@ -92,4 +92,8 @@ switch(state)
 			state = monkey_state.idle;
 		}
 		break;
+	
+	default:
+		show_debug_message("something went wrong"); //Shouldn't happen
+		break;
 }

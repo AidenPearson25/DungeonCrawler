@@ -1,3 +1,5 @@
+//The slime can kill now
+slimeAttack = 1;
 
 slimeColor = irandom_range(1, 3);
 
@@ -27,7 +29,6 @@ slimeState = 0; //Much like player state.
 bounceMin = 10; //Minimum time between bounces
 bounceMax = 60; //Maximum time between bounces
 bounceTime = 15; //The amount of time the slime bounces for.
-slimeAttack = 1; //How much damage the slime deals
 alarm_set(1, irandom_range(bounceMin, bounceMax)); //Prepare the bounce loop
 speedx = random_range(1,2); //Set speed
 

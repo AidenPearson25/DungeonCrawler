@@ -6,6 +6,12 @@ jump_tick = 0;
 rock_throw_cooldown = 1.5 /*<< Seconds */ * room_speed;
 rock_throw_tick = 0;
 
+//Monkey's health
+monkeyHealth = 1;
+
+recoilAngle = 0;
+recoilSpeed = 7;
+
 // Sets the current state of the monkey
 enum monkey_state
 {
