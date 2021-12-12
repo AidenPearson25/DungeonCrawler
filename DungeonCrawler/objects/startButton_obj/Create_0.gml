@@ -1,6 +1,3 @@
-//Just scaling up the start button
-image_xscale = 3;
-image_yscale = 3;
 
 draw_set_font(emulogic_font);
 draw_set_valign(fa_middle);

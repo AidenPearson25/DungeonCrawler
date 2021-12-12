@@ -1,6 +1,39 @@
 
 switch(currentState) //Controlling Everything
 {
+	case 5: //Die
+	
+		break;
+	
+	case 4: //Recoil
+		if(alarm_get(4) == -1) //If the invincibility alarm hasn't already been set,
+		{
+			alarm_set(4, recoilTime); //set the invinicibility alarm for recoil.
+		}
+		with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				
+						if (obj_player.recoilSpeed > 0)
+						{
+							obj_player.recoilSpeed = 0;
+						}
+							
+			}
+			else
+			{
+				obj_player.recoilSpeed = 2;
+			}
+		}
+	
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+		break;
+	
 	case 3: //Defending
 		
 		break; //Done with defending
@@ -70,6 +103,10 @@ switch(currentState) //Controlling Everything
 				sprite_index = spr_playerUp;
 				image_speed = 1;
 			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
 		}
 
 		if (!keyboard_check(ord(upKey)) && keyboard_check(ord(downKey))) //Holding just down
@@ -80,6 +117,10 @@ switch(currentState) //Controlling Everything
 			{
 				sprite_index = spr_playerDown;
 				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
 			}
 		}
 
@@ -97,6 +138,10 @@ switch(currentState) //Controlling Everything
 				sprite_index = spr_playerLeft;
 				image_speed = 1;
 			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
 		}
 
 		if (!keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey))) //Pressing just right
@@ -107,6 +152,10 @@ switch(currentState) //Controlling Everything
 			{
 				sprite_index = spr_playerRight;
 				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
 			}
 		}
 
@@ -119,6 +168,7 @@ switch(currentState) //Controlling Everything
 		{
 			image_speed = 0;
 			image_index = 0;
+			audio_stop_sound(walking_wav);
 		}
 
 		switch(xInput) //Check xInput to add speed
@@ -308,6 +358,10 @@ switch(currentState) //Controlling Everything
 			currentState = 2; //Rolling state
 			rollInvincibility = true;
 			alarm_set(0, rollDuration);
+			if (!audio_is_playing(rollSound_wav))
+			{
+				audio_play_sound(rollSound_wav, 3, false);
+			}
 			
 			if (xInput > 0 || xInput < 0) //If moving left or right
 			{
@@ -386,4 +440,30 @@ switch(currentState) //Controlling Everything
 	default:
 		show_debug_message("Something went wrong"); //Shouldn't happen
 		break;
+}
+
+//Determine whether the player is currently invincible
+if(iframes || rollInvincibility)
+{
+	invincibility = true; //If any other invincibility booleans are true, this should be, too.
+}
+else if(currentState == 4)
+{
+	invincibility = true; //Avoid unnecessary extra damage
+}
+else
+{
+	invincibility = false;	
+}
+
+if (gameOver = true) {
+	if (audio_is_playing(walking_wav))
+	{
+		audio_stop_sound(walking_wav);
+	}
+	gameOverTimer -= 1/60;
+}
+
+if (gameOverTimer <= 0) {
+	room_goto(gameOverRoom);
 }

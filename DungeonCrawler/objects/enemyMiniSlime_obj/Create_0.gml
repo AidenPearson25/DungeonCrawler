@@ -5,8 +5,12 @@ speed = 0;
 slimeHealth = 1; //amount of health
 speedx = random_range(1,2);
 slimeState = 0; //Much like player state.
+
 recoilSpeed = 2;
+recoilAngle = 0;
+
 slimeColor = 0;
+slimeAttack = 1;
 
 function ChangeColor()
 {

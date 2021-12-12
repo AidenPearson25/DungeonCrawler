@@ -12,6 +12,14 @@ defendKey = "L"; //Default defend key
 //States
 image_speed = 0;
 currentState = 0;
+invincibility = false;
+
+//Recoil variables
+recoilTime = 15;
+recoilSpeed = 2;
+recoilAngle = 0;
+iframesTime = 60; //How much time before the player can take more damage
+iframes = false;
 
 //Movement variables
 xSpeed = 0; //How much x to change per frame
@@ -41,3 +49,13 @@ attackEndLag = 12; //How long between attacks
 
 //Equipment
 //playerWeapon = obj_sword; //Do something like this so that later when we have multiple weapons, we can have the enemies just get the player weapon when taking damage.
+
+//Stats
+playerMaxHealth = 5; //How much health you can have
+playerHealth = 5; //How much health you currently have
+playerDefense = 5; //How much resistance you currently have
+damageReduction = playerDefense * 0.01; //Not using this for now, but we can return to this once we make armor.
+
+//Variables to set off the game over screen
+gameOver = false;
+gameOverTimer = 3;

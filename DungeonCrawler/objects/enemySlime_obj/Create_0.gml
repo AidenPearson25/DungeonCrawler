@@ -1,3 +1,5 @@
+//The slime can kill now
+slimeAttack = 1;
 
 slimeColor = irandom_range(1, 3);
 

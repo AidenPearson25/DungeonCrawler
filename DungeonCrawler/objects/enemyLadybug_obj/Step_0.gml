@@ -1,11 +1,34 @@
 //If the player is to the left of the ladybug, it will accelerate to the left with its speed
-//increasing up to 12 over double the player's own speed
+//increasing up to 13 over double the player's own speed
 //This is repeated for each direction depending on the player's location relative to the ladybug, so it 
 //will have to accelerate and adjust its speed and direction so it's possible to avoid, but still a threat
-
+if (obj_player.gameOver == false)
+{
 switch(bugState)
 {
-	case 1: //Attack player
+	case 1: //Recoil (this shouldn't be 0)
+	with (obj_wall)
+		{
+			if (place_meeting(x, y, enemyLadybug_obj))
+			{
+				
+						if (enemyLadybug_obj.recoilSpeed > 0)
+						{
+							enemyLadybug_obj.recoilSpeed = 0;
+						}
+							
+			}
+			else
+			{
+				enemyLadybug_obj.recoilSpeed = 2;
+			}
+		}
+		
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		break;
+	
+	case 0: //Attack player (this should be 0)
 		if (((x - obj_player.x) > 0) && (xSpeed < 13))
 		{
 			xSpeed -= 0.1;
@@ -26,11 +49,6 @@ switch(bugState)
 				
 		x += xSpeed;
 		y += ySpeed;
-		break;
-		
-	case 0: //Recoil
-		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
-		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
 		break;
 	
 	default:
@@ -78,3 +96,16 @@ with (obj_wall)
 										}
 					}
 				}
+				
+if (!audio_is_playing(ladybug_mp3))
+{
+	audio_play_sound(ladybug_mp3, 7, true);
+}
+}
+else if (obj_player.gameOver = true)
+{
+	if (audio_is_playing(ladybug_mp3))
+	{
+		audio_stop_sound(ladybug_mp3);
+	}
+}
