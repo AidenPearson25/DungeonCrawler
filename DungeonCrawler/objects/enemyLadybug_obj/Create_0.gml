@@ -8,3 +8,5 @@ recoilAngle = 0;
 recoilSpeed = 7;
 
 bugAttack = 1; //How much damage the ladybug deals
+
+image_speed = 0.5;

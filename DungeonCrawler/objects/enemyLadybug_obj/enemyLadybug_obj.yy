@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "enemyLadybug_spr",
-    "path": "sprites/enemyLadybug_spr/enemyLadybug_spr.yy",
+    "name": "spr_ladybugDown",
+    "path": "sprites/spr_ladybugDown/spr_ladybugDown.yy",
   },
   "solid": false,
   "visible": true,
