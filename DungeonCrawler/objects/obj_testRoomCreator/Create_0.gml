@@ -86,7 +86,12 @@ for (var i = 2; i < roomCount; i++)
 	RoomCheck(currentRoom);
 }
 
-DrawHallways();
+DrawHallways(currentRoom);
+
+with (obj_roomData)
+{
+	DrawExtraHallways(0);
+}
 
 for (var i = 0; i < 100; i++)
 {
