@@ -24,6 +24,7 @@
     {"id":{"name":"enemyMonkey_obj","path":"objects/enemyMonkey_obj/enemyMonkey_obj.yy",},"order":5,},
     {"id":{"name":"spr_sword","path":"sprites/spr_sword/spr_sword.yy",},"order":8,},
     {"id":{"name":"DrawHallways","path":"scripts/DrawHallways/DrawHallways.yy",},"order":3,},
+    {"id":{"name":"playerTakeDamage","path":"scripts/playerTakeDamage/playerTakeDamage.yy",},"order":4,},
     {"id":{"name":"_spr_monkeySheet","path":"sprites/_spr_monkeySheet/_spr_monkeySheet.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"gameRoom","path":"rooms/gameRoom/gameRoom.yy",},"order":3,},

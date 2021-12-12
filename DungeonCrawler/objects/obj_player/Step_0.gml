@@ -1,6 +1,11 @@
 
 switch(currentState) //Controlling Everything
 {
+	case 4: //Recoil
+		x += (-cos(recoilAngle * (pi / 180)) * recoilSpeed);
+		y += (-sin(recoilAngle * (pi / 180)) * recoilSpeed);
+		break;
+	
 	case 3: //Defending
 		
 		break; //Done with defending
@@ -386,4 +391,18 @@ switch(currentState) //Controlling Everything
 	default:
 		show_debug_message("Something went wrong"); //Shouldn't happen
 		break;
+}
+
+//Determine whether the player is currently invincible
+if(iframes || rollInvincibility)
+{
+	invincibility = true; //If any other invincibility booleans are true, this should be, too.
+}
+else if(currentState == 4)
+{
+	invincibility = true; //Avoid unnecessary extra damage
+}
+else
+{
+	invincibility = false;	
 }
