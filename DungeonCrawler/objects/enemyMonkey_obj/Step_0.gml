@@ -6,6 +6,8 @@ var len_x = x - obj_player.x;
 var len_y = y - obj_player.y;
 
 // State machine
+if (obj_player.gameOver == false)
+{
 switch(state)
 {
 	case(monkey_state.idle):
@@ -96,4 +98,5 @@ switch(state)
 	default:
 		show_debug_message("something went wrong"); //Shouldn't happen
 		break;
+}
 }

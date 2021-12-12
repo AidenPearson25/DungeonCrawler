@@ -3,6 +3,7 @@
 if((currentState == 4) && (playerHealth <= 0)) //If you just recoiled, and you're dead,
 {
 	currentState = 5; //enter a dead state.
+	gameOver = true;
 }
 if(currentState == 4) //if you're here because you're recoiling,
 {
