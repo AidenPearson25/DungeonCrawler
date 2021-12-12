@@ -78,3 +78,8 @@ with (obj_wall)
 										}
 					}
 				}
+				
+if (!audio_is_playing(ladybug_mp3))
+{
+	audio_play_sound(ladybug_mp3, 7, true);
+}
