@@ -22,6 +22,7 @@
     {"id":{"name":"takeDamage","path":"scripts/takeDamage/takeDamage.yy",},"order":2,},
     {"id":{"name":"spr_playerRight","path":"sprites/spr_playerRight/spr_playerRight.yy",},"order":2,},
     {"id":{"name":"obj_sword","path":"objects/obj_sword/obj_sword.yy",},"order":10,},
+    {"id":{"name":"intro_obj","path":"objects/intro_obj/intro_obj.yy",},"order":13,},
     {"id":{"name":"rollSound_wav","path":"sounds/rollSound_wav/rollSound_wav.yy",},"order":2,},
     {"id":{"name":"spr_monkeyUpJump","path":"sprites/spr_monkeyUpJump/spr_monkeyUpJump.yy",},"order":6,},
     {"id":{"name":"spr_playerDown","path":"sprites/spr_playerDown/spr_playerDown.yy",},"order":1,},
