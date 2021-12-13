@@ -6,6 +6,10 @@ function playerTakeDamage(enemyAttack, enemy)
 	{
 		return;
 	}
+	if(obj_player.currentState == 3)
+	{
+		enemyAttack *= obj_player.damageReductionMultiplier; //Halve the damage if the player is defending.
+	}
 	obj_player.playerHealth -= enemyAttack; //Take the necessary amount of damage
 	obj_player.currentState = 4; //Enter recoil state
 
