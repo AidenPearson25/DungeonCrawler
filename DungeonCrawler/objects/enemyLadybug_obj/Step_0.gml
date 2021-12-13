@@ -46,6 +46,24 @@ switch(bugState)
 		{
 			ySpeed += 0.1;
 		}
+		
+		if (((x - obj_player.x) > 0) && (sqr(x - obj_player.x) > sqr(y - obj_player.y)))
+		{
+			sprite_index = spr_ladybugLeft
+		}
+		else if (((x - obj_player.x) < 0) && (sqr(x - obj_player.x) > sqr(y - obj_player.y)))
+		{
+			sprite_index = spr_ladybugRight;
+		}
+		
+		if (((y - obj_player.y) > 0) && (sqr(y - obj_player.y) > sqr(x - obj_player.x)))
+		{
+			sprite_index = spr_ladybugUp;
+		}
+		else if (((y - obj_player.y) < 0) && (sqr(y - obj_player.y) > sqr(x - obj_player.x)))
+		{
+			sprite_index = spr_ladybugDown;
+		}
 				
 		x += xSpeed;
 		y += ySpeed;

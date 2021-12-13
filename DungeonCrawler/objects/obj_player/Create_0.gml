@@ -21,6 +21,10 @@ recoilAngle = 0;
 iframesTime = 60; //How much time before the player can take more damage
 iframes = false;
 
+//Defense variables
+defenseSpeed = 0.25; //How fast you move while defending
+damageReductionMultiplier = 0.5; //how much damage gets reduced by while defending.
+
 //Movement variables
 xSpeed = 0; //How much x to change per frame
 ySpeed = 0; //How much y to change per frame

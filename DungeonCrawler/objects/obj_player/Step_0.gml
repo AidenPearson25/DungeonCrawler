@@ -35,7 +35,207 @@ switch(currentState) //Controlling Everything
 		break;
 	
 	case 3: //Defending
+		//Unfortunately, the player needs to be able to move while defending, so we have this:
+		//Controlling Movement
+		if (keyboard_check(ord(upKey)) && !keyboard_check(ord(downKey))) //Holding just up
+		{
+			yInput = -1; //yInput Up
+			lastDirection = 0; //Up
+			if (xInput == 0)
+			{
+				sprite_index = spr_playerUp;
+				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
+		}
+
+		if (!keyboard_check(ord(upKey)) && keyboard_check(ord(downKey))) //Holding just down
+		{
+			yInput = 1; //yInput Down
+			lastDirection = 2; //Down
+			if (xInput == 0)
+			{
+				sprite_index = spr_playerDown;
+				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
+		}
+
+		if ((!keyboard_check(ord(upKey)) && !keyboard_check(ord(downKey))) || (keyboard_check(ord(upKey)) && keyboard_check(ord(downKey)))) //Neither or both
+		{
+			yInput = 0;
+		}
 		
+		if (keyboard_check(ord(leftKey)) && !keyboard_check(ord(rightKey))) //Pressing just Left
+		{
+			xInput = -1; //xInput Left
+			lastDirection = 1; //Left
+			if (yInput == 0)
+			{
+				sprite_index = spr_playerLeft;
+				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
+		}
+
+		if (!keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey))) //Pressing just right
+		{
+			xInput = 1; //xInput Right
+			lastDirection = 3; //Right
+			if (yInput == 0)
+			{
+				sprite_index = spr_playerRight;
+				image_speed = 1;
+			}
+			if (!audio_is_playing(walking_wav))
+			{
+				audio_play_sound(walking_wav, 4, true);
+			}
+		}
+
+		if ((!keyboard_check(ord(leftKey)) && !keyboard_check(ord(rightKey))) || (keyboard_check(ord(leftKey)) && keyboard_check(ord(rightKey)))) //Neither or both
+		{
+			xInput = 0; //xInput 0
+		}
+		
+		if (xInput == 0 && yInput == 0)
+		{
+			image_speed = 0;
+			image_index = 0;
+			audio_stop_sound(walking_wav);
+		}
+
+		switch(xInput) //Check xInput to add speed
+		{
+			case 1: //Right
+				if (xAcceleration < xInput) //Check if not yet at full speed
+				{
+					xAcceleration += 0.1; //Incrementally add accel until full speed
+				}
+				break;
+	
+			case 0: //Neutral
+				if (xAcceleration > 0) //Check whether accel is too high
+				{
+					xAcceleration -= 0.1; //Incrementally lose accel until 0
+				}
+		
+				else if (xAcceleration < 0) //Check whether accel is too low
+				{
+					xAcceleration += 0.1; //Incrementally lose accel until 0
+				}
+				break;
+	
+			case -1: //Left
+				if (xAcceleration > xInput) //Check if not yet at full speed
+				{
+					xAcceleration -= 0.1; //Incrementally add accel until full speed
+				}
+				break;
+		
+			default:
+				show_debug_message("something went wrong"); //Shouldn't happen
+				break;
+		}
+
+		switch(yInput) //Check yInput to add speed
+		{
+			case 1: //Right
+				if (yAcceleration < yInput) //Check if not yet at full speed
+				{
+					yAcceleration += 0.1; //Incrementally add accel until full speed
+				}
+				break;
+	
+			case 0: //Neutral
+				if (yAcceleration > 0) //Check whether accel is too high
+				{
+					yAcceleration -= 0.1; //Incrementally lose accel until 0
+				}
+		 
+				else if (yAcceleration < 0) //Check whether accel is too low
+				{
+					yAcceleration += 0.1; //Incrementally lose accel until 0
+				}
+				break;
+	
+			case -1: //Left
+				if (yAcceleration > yInput) //Check if not yet at full speed
+				{
+					yAcceleration -= 0.1; //Incrementally add accel until full speed
+				}
+				break;
+		
+			default:
+				show_debug_message("something went wrong"); //Shouldn't happen
+				break;
+		}
+
+		xSpeed = (defenseSpeed * xAcceleration); //Set xSpeed
+		ySpeed = (defenseSpeed * yAcceleration); //Set ySpeed
+
+		with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				switch(wallType)
+				{
+					case 3: //Right
+						if (obj_player.xAcceleration > 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 2: //Down
+						if (obj_player.yAcceleration > 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					case 1: //Left
+						if (obj_player.xAcceleration < 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 0: //Top
+						if (obj_player.yAcceleration < 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+						break;
+				}
+			}
+		}
+
+		x += xSpeed; //Add to x
+		y += ySpeed; //Add to y
+		
+		if (keyboard_check_pressed(ord(defendKey))) //If the defend key is pressed again, stop defending
+		{
+			show_debug_message("Not Defending");
+			currentState = 0;
+		}
 		break; //Done with defending
 	
 	case 2: //Rolling
@@ -89,7 +289,54 @@ switch(currentState) //Controlling Everything
 		break; //Done with rolling
 	
 	case 1: //Attacking
-		
+	
+	with (obj_wall)
+		{
+			if (place_meeting(x, y, obj_player))
+			{
+				switch(wallType)
+				{
+					case 3: //Right
+						if (obj_player.xSpeed > 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+							
+					case 2: //Down
+						if (obj_player.ySpeed > 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					case 1: //Left
+						if (obj_player.xSpeed < 0)
+						{
+							obj_player.xAcceleration = 0;
+							obj_player.xSpeed = 0;
+						}
+						break;
+						
+					case 0: //Top
+						if (obj_player.ySpeed < 0)
+						{
+							obj_player.yAcceleration = 0;
+							obj_player.ySpeed = 0;
+						}
+						break;
+						
+					default: //Shouldn't happen
+						show_debug_message("Something went wrong");
+						break;
+				}
+			}
+		}
+	
+		x += xSpeed; //Add to x
+		y += ySpeed; //Add to y
 		break; //Done with attacking
 	
 	case 0: //Movement
@@ -349,6 +596,9 @@ switch(currentState) //Controlling Everything
 			weaponObject.xDirection = xAttackDirection;
 			weaponObject.yDirection = yAttackDirection;
 			weaponObject.MatchDirection();
+			
+			xSpeed = (moveSpeed * xAttackDirection);
+			ySpeed = (moveSpeed * yAttackDirection);
 		}
 
 
@@ -432,7 +682,8 @@ switch(currentState) //Controlling Everything
 		//Start defending
 		if (keyboard_check_pressed(ord(defendKey))) //Check if defend key is pressed
 		{
-			
+			currentState = 3;
+			show_debug_message("Defending");
 		}
 		
 		break; //Finally done with movement haha
