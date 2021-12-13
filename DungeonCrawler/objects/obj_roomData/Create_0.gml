@@ -260,6 +260,12 @@ function YTileSet(_current)
 	{
 		var yDirection = 1;
 	}
+	
+	var startTrigger = instance_create_layer((x + _current.x) / 2, y + ((leftSize[1] / 2 * 16) * yDirection), "roomControllers", obj_roomTrigger);
+	startTrigger.targetRoom = self.id;
+	startTrigger.image_blend = c_blue;
+	var endTrigger = instance_create_layer((x + _current.x) / 2, _current.y + ((_current.leftSize[1] / 2 * 16) * yDirection), "roomControllers", obj_roomTrigger);
+	endTrigger.targetRoom = _current;
 		
 	for (var i = 0; i < (abs(y - _current.y) / 16); i++)
 	{
@@ -513,14 +519,14 @@ function DrawTiles(_current)
 	if ((abs(x - _current.x) < (leftSize[0] * 8)) && (abs(x - _current.x) < (_current.leftSize[0] * 8)))
 	{
 		//Straight vertical line
-		draw_line_width((x + _current.x) / 2, y, (x + _current.x) / 2, _current.y, 10);
+		//draw_line_width((x + _current.x) / 2, y, (x + _current.x) / 2, _current.y, 10);
 		YTileSet(_current);
 	}
 
 	else if ((abs(y - _current.y) < (leftSize[1] * 8)) && (abs(y - _current.y) < (_current.leftSize[1] * 8)))
 	{
 		//Straight horizontal line
-		draw_line_width(x, (y + _current.y) / 2, _current.x, (y + _current.y) / 2, 10);
+		//draw_line_width(x, (y + _current.y) / 2, _current.x, (y + _current.y) / 2, 10);
 		XTileSet(_current);
 	}
 
@@ -554,8 +560,8 @@ function DrawTiles(_current)
 			anglePointY = y;
 		}
 	
-		draw_line_width(x, y, anglePointX, anglePointY, 10);
-		draw_line_width(_current.x, _current.y, anglePointX, anglePointY, 10);
+		//draw_line_width(x, y, anglePointX, anglePointY, 10);
+		//draw_line_width(_current.x, _current.y, anglePointX, anglePointY, 10);
 		
 		CornerXTileSet(_current, anglePointX, anglePointY);
 		CornerYTileSet(_current, anglePointX, anglePointY);

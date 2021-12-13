@@ -231,7 +231,7 @@ switch(currentState) //Controlling Everything
 		x += xSpeed; //Add to x
 		y += ySpeed; //Add to y
 		
-		if (keyboard_check_pressed(ord(defendKey))) //If the defend key is pressed again, stop defending
+		if (!keyboard_check(ord(defendKey))) //If the defend key is pressed again, stop defending
 		{
 			show_debug_message("Not Defending");
 			currentState = 0;

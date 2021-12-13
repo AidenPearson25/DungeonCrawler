@@ -24,3 +24,5 @@ draw_text_ext_transformed(posxAll, posyTitle, "Tergiverse", lineheightTitle, tex
 draw_text_ext_transformed(posxAll, posyPressEnter, "Press ENTER to begin", lineheightPressEnter, textwidthPressEnter, xsizeRest, ysizeRest, 0);
 
 draw_text_ext_transformed(posxAll, posyInstructions, "WASD to Move J to Attack  K to Roll   L to Defend", lineheightInstructions, textwidthInstructions, xsizeRest, ysizeRest, 0);
+
+draw_text_ext_transformed(posxAll, posyInstructions - 250, "To see current room generation, press Enter while in game", lineheightInstructions, textwidthInstructions, xsizeRest, ysizeRest, 0);

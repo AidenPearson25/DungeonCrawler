@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.05,
+  "volume": 0.15,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "ladybug_mp3.mp3",
-  "duration": 3.384,
+  "soundFile": "mus_tree.mp3",
+  "duration": 26.0701256,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ladybug_mp3",
+  "name": "mus_tree",
   "tags": [],
   "resourceType": "GMSound",
 }

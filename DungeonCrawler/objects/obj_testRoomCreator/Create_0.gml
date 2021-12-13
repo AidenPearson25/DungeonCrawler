@@ -104,3 +104,10 @@ for (var i = 0; i < 100; i++)
 		}
 	}
 }
+
+with (obj_roomData)
+{
+	DrawTiles(target);
+	DrawTiles(extraTarget1);
+	DrawTiles(extraTarget2);
+}
